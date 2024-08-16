@@ -18,27 +18,35 @@
         header {
             background-color: #333;
             color: #fff;
-            padding: 20px 0;
+            padding: 10px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         header .logo {
-            font-size: 24px;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        header nav {
+            flex-basis: 100%;
+            text-align: center;
         }
         header nav a {
             color: #fff;
-            margin: 0 10px;
+            margin: 10px 15px;
             text-decoration: none;
+            display: inline-block;
         }
         header .cta {
             background-color: #f90;
             padding: 10px 20px;
             border-radius: 5px;
+            display: inline-block;
         }
         .hero {
             background: url('hero-image.jpg') no-repeat center center/cover;
-            height: 400px;
+            height: 300px;
             color: #fff;
             text-align: center;
             display: flex;
@@ -47,14 +55,16 @@
             padding: 0 20px;
         }
         .hero h1 {
-            font-size: 36px;
+            font-size: 28px;
+            margin-bottom: 10px;
         }
         .hero p {
-            font-size: 18px;
+            font-size: 16px;
+            margin-bottom: 20px;
         }
         .hero .buttons a {
             display: inline-block;
-            margin: 10px;
+            margin: 5px;
             padding: 10px 20px;
             background-color: #f90;
             color: #fff;
@@ -62,38 +72,43 @@
             text-decoration: none;
         }
         .services, .about-us, .case-studies, .blog, .contact {
-            padding: 40px 0;
+            padding: 30px 0;
             text-align: center;
         }
         .services h2, .about-us h2, .case-studies h2, .blog h2, .contact h2 {
-            font-size: 28px;
+            font-size: 24px;
             margin-bottom: 20px;
         }
         .services .service-card, .case-studies .testimonial, .blog .post {
-            margin: 20px 0;
+            margin: 10px 0;
             padding: 20px;
             background-color: #f4f4f4;
             border-radius: 5px;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 20px;
         }
         .about-us .content {
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: left;
         }
         .about-us img {
             width: 100%;
-            max-width: 500px;
+            max-width: 300px;
             margin-bottom: 20px;
         }
         .about-us .text {
             width: 100%;
-            max-width: 500px;
+            max-width: 300px;
+            margin: 0 auto;
         }
         .contact form {
             display: flex;
             flex-direction: column;
             width: 100%;
-            max-width: 500px;
+            max-width: 300px;
             margin: 0 auto;
         }
         .contact form input, .contact form textarea {
@@ -108,6 +123,7 @@
             color: #fff;
             border: none;
             border-radius: 5px;
+            cursor: pointer;
         }
         footer {
             background-color: #333;
@@ -121,25 +137,30 @@
             text-decoration: none;
         }
 
-        /* Desktop Styles */
+        /* Larger Screen Styles */
         @media(min-width: 768px) {
+            header {
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+            header nav {
+                flex-basis: auto;
+            }
             .services, .about-us .content, .case-studies, .blog {
                 display: flex;
                 justify-content: space-between;
                 text-align: left;
+                flex-wrap: wrap;
             }
             .services .service-card, .case-studies .testimonial, .blog .post {
                 width: 30%;
+                margin: 0 auto;
             }
-            .about-us .content {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            .about-us img {
+            .about-us img, .about-us .text {
                 width: 45%;
             }
-            .about-us .text {
-                width: 50%;
+            .contact form {
+                max-width: 500px;
             }
         }
     </style>
@@ -218,4 +239,3 @@
     </footer>
 </body>
 </html>
-
