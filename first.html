@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 24px;
+        }
+        header nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        header .cta {
+            background-color: #f90;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            height: 400px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 36px;
+        }
+        .hero p {
+            font-size: 18px;
+        }
+        .hero .buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #f90;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .services, .about-us, .case-studies, .blog, .contact {
+            padding: 40px 0;
+            text-align: center;
+        }
+        .services h2, .about-us h2, .case-studies h2, .blog h2, .contact h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .services .service-card, .case-studies .testimonial, .blog .post {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+        .about-us .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .about-us img {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 20px;
+        }
+        .about-us .text {
+            width: 100%;
+            max-width: 500px;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact form input, .contact form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .contact form button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* Desktop Styles */
+        @media(min-width: 768px) {
+            .services, .about-us .content, .case-studies, .blog {
+                display: flex;
+                justify-content: space-between;
+                text-align: left;
+            }
+            .services .service-card, .case-studies .testimonial, .blog .post {
+                width: 30%;
+            }
+            .about-us .content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .about-us img {
+                width: 45%;
+            }
+            .about-us .text {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <div class="logo">Corporate Logo</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+            <a href="#">Case Studies</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact Us</a>
+            <a href="#" class="cta">Get a Quote</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Empowering Your Business with Innovation</h1>
+        <p>Helping you reach new heights in your industry.</p>
+        <div class="buttons">
+            <a href="#">Learn More</a>
+            <a href="#">Get Started</a>
+        </div>
+    </section>
+
+    <section class="services container">
+        <h2>Our Services</h2>
+        <div class="service-card">Consulting</div>
+        <div class="service-card">IT Solutions</div>
+        <div class="service-card">Financial Services</div>
+    </section>
+
+    <section class="about-us container">
+        <h2>About Us</h2>
+        <div class="content">
+            <img src="team-photo.jpg" alt="Team Photo">
+            <div class="text">
+                <p>We are a company dedicated to providing exceptional services in various industries. Our team is passionate and skilled, ensuring top-notch results for our clients.</p>
+                <a href="#">Read More About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-studies container">
+        <h2>Case Studies</h2>
+        <div class="testimonial">Client Testimonial 1</div>
+        <div class="testimonial">Client Testimonial 2</div>
+        <div class="testimonial">Client Testimonial 3</div>
+    </section>
+
+    <section class="blog container">
+        <h2>Latest News</h2>
+        <div class="post">Blog Post 1</div>
+        <div class="post">Blog Post 2</div>
+        <a href="#">View More</a>
+    </section>
+
+    <section class="contact container">
+        <h2>Contact Us</h2>
+        <p>123 Corporate Street, Business City, Country</p>
+        <p>Email: info@corporate.com | Phone: +123 456 7890</p>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <input type="text" placeholder="Subject">
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Corporate Name. All Rights Reserved.</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Sitemap</a>
+    </footer>
+</body>
+</html>
+
